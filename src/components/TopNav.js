@@ -1,6 +1,5 @@
 // Dependencies.
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -56,10 +55,6 @@ class TopNav extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  dispatch
-});
-
 
 // Export.
-export default connect(mapDispatchToProps)(TopNav);
+export default TopNav;
