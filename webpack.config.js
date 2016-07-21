@@ -20,7 +20,7 @@ const config = {
     contentBase: './build',
     hot: true,
     noInfo: false,
-    port: 2001,
+    port: 2015,
   },
 
   copydocs: [
