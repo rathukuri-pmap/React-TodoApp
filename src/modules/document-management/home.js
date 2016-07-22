@@ -1,10 +1,11 @@
 // Dependencies.
 import React from 'react';
-import { connect } from 'react-redux';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 // Layout components.
 import Main from '../../layouts/main';
+import ContentArea from './components/ContentArea';
+// import Sidebar from './components/Sidebar';
 
 // Utilities.
 import utils from '../../utils';
@@ -23,22 +24,8 @@ class DocumentManagement extends React.Component {
     utils.title(props);
   }
 
-  componentWillMount() {
-    const { dispatch } = this.props;
-    dispatch(toggleRightSidebar(true));
-  }
-
-  handleToggleClick() {
-    const { dispatch, dmUi } = this.props;
-    dispatch(toggleRightSidebar(!dmUi.rightSidebarOpened));
-  }
-
   // Render method.
   render() {
-    const { dmUi } = this.props;
-
-    const { rightSidebarOpened } = dmUi;
-
     const styles = {
       mainContent: {
         minHeight: 400,
@@ -59,14 +46,12 @@ class DocumentManagement extends React.Component {
       <Main>
         <h1>
           Document Management
-          {' '}
-          <Button bsStyle="primary" bsSize="sm" onClick={this.handleToggleClick.bind(this)}>Toggle Sidebar</Button>
         </h1>
 
         <Row>
 
-          <Col sm={rightSidebarOpened ? 9 : 12} style={styles.mainContent}>
-            Main Content
+          <Col sm={9} style={styles.mainContent}>
+            <ContentArea title="Main Content" />
           </Col>
 
           <Col sm={3} style={styles.sidebar}>
@@ -80,15 +65,6 @@ class DocumentManagement extends React.Component {
   }
 }
 
-// Validation.
-DocumentManagement.propTypes = {
-  dispatch: React.PropTypes.func,
-  dmUi: React.PropTypes.object,
-};
-
-const mapStateToProps = (state) => ({
-  dmUi: state.dmUi,
-});
 
 // Export.
-export default connect(mapStateToProps)(DocumentManagement);
+export default DocumentManagement;
