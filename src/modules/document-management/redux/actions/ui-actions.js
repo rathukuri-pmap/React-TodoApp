@@ -1,12 +1,16 @@
 import {
-  SH_TOGGLE_RIGHT_SIDEBAR,
+  DM_TOGGLE_RIGHT_SIDEBAR,
+  DM_CHANGE_FOLDER,
 } from '../constants/ui-constants';
 
 
-// Global.
 export function toggleRightSidebar(value) {
   return {
-    type: SH_TOGGLE_RIGHT_SIDEBAR,
+    type: DM_TOGGLE_RIGHT_SIDEBAR,
     value
   };
+}
+
+export function changeFolder(id) {
+  return { type: DM_CHANGE_FOLDER, id};
 }
