@@ -1,5 +1,6 @@
 // Dependencies.
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 
 // Define class.
@@ -8,18 +9,15 @@ class ComponentTemplate extends React.Component {
   // Render method.
   render() {
     const title = this.props.title;
-    const message = this.props.message;
 
     return (
       <div>
-        <Panel header={title} bsStyle="success">
-          <p className="msg">{message}</p>
-          <p>
-            <Button bsStyle="success">Button</Button>
-            <span> and </span>
-            <Button>Another Button</Button>
-          </p>
-        </Panel>
+        <p className="lead">{title}</p>
+        <p>
+          <Button bsStyle="success">Button</Button>
+          <span> and </span>
+          <Button>Another Button</Button>
+        </p>
       </div>
     );
   }
@@ -28,7 +26,6 @@ class ComponentTemplate extends React.Component {
 // PropTypes declaration.
 ComponentTemplate.propTypes = {
   title: React.PropTypes.string,
-  message: React.PropTypes.string
 };
 
 // Export.
