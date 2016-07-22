@@ -27,6 +27,8 @@ import shModuleMenuSetup from '../../modules/shell/redux/reducers/moduleMenuSetu
 // Document Management (dm_).
 import dmSettings from '../../modules/document-management/redux/reducers/settings'
 import dmUi from '../../modules/document-management/redux/reducers/ui';
+import dmFolder from '../../modules/document-management/redux/reducers/folder';
+import dmDocument from '../../modules/document-management/redux/reducers/document';
 
 
 module.exports = {
@@ -59,4 +61,6 @@ module.exports = {
   // Document Management.
   dmSettings,
   dmUi,
+  dmFolder,
+  dmDocument,
 };
