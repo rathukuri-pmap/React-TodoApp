@@ -9,6 +9,7 @@ import dataToOptions from './_dataToOptions';
 import getRestHeaders from './_getRestHeaders';
 import windowDimensions from './_windowDimensions';
 import highlightTextString from './_highlightTextString';
+import alphabetizeByKey from './_alphabetizeByKey';
 
 // Export object.
 export default {
@@ -22,4 +23,5 @@ export default {
   getRestHeaders,
   windowDimensions,
   highlightTextString,
+  alphabetizeByKey,
 };
