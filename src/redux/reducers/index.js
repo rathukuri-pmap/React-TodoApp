@@ -30,6 +30,10 @@ import dmUi from '../../modules/document-management/redux/reducers/ui';
 import dmFolder from '../../modules/document-management/redux/reducers/folder';
 import dmDocument from '../../modules/document-management/redux/reducers/document';
 
+// todo (td_).
+import todos from '../../modules/todo/redux/reducers/todos'
+import visibilityFilter from '../../modules/todo/redux/reducers/visibilityFilter';
+
 
 module.exports = {
   // Global.
@@ -63,4 +67,8 @@ module.exports = {
   dmUi,
   dmFolder,
   dmDocument,
+
+  // Todo
+  todos,
+  visibilityFilter,
 };
