@@ -44,6 +44,10 @@ class TopNav extends React.Component {
               <NavItem eventKey={4}>Todo App</NavItem>
             </LinkContainer>
 
+            <LinkContainer to="/kanban">
+              <NavItem eventKey={5}>Kanban App</NavItem>
+            </LinkContainer>
+
           </Nav>
 
           <Nav pullRight>

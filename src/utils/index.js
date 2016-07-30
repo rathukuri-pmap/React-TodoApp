@@ -10,6 +10,7 @@ import getRestHeaders from './_getRestHeaders';
 import windowDimensions from './_windowDimensions';
 import highlightTextString from './_highlightTextString';
 import alphabetizeByKey from './_alphabetizeByKey';
+import findWithAttr from './_findWithAttr'
 
 // Export object.
 export default {
@@ -24,4 +25,5 @@ export default {
   windowDimensions,
   highlightTextString,
   alphabetizeByKey,
+  findWithAttr,
 };

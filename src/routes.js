@@ -10,6 +10,7 @@ import PageNotFound from './modules/global/pages/404';
 
 import DocumentManagement from './modules/document-management/home';
 import TodoApp from './modules/todo/home';
+import KanbanApp from './modules/kanban/home';
 
 let onUpdate = () => { window.scrollTo(0, 0); };
 
@@ -21,6 +22,7 @@ export default (
 		<Route path="/about" component={About} title="Home" onUpdate={onUpdate} />
 		<Route path="/document-management" component={DocumentManagement} title="Document Management" onUpdate={onUpdate} />
 		<Route path="/todo" component={TodoApp} title="todo" onUpdate={onUpdate} />
+		<Route path="/kanban" component={KanbanApp} title="kanban" onUpdate={onUpdate} />
 		<Route path="/oops" component={PageNotFound} title="Page Not Found" onUpdate={onUpdate} />
 		<Redirect from='*' to='/oops' />
 	</Router>
