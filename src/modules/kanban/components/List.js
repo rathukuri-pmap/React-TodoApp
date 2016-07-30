@@ -8,7 +8,6 @@ class List extends Component {
     super();
   }
   render(){
-    console.log(this.props.items);
     let items;
     if (!this.props.items.length) {
       items = <div>No Items to display</div>

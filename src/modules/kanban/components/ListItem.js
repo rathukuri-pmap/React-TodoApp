@@ -5,9 +5,11 @@ class ListItem extends Component {
     super();
   }
   render(){
+    return(
     <div>
     {this.props.title}
     </div>
+  );
   }
 }
 

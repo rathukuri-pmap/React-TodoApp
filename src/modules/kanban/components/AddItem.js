@@ -8,12 +8,11 @@ class AddItem extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    alert(this.refs.txtInput.value);
     if (!this.refs.txtInput.value.trim()) {
       return
     }
     this.props.dispatch(addItem(this.props.status,this.refs.txtInput.value))
-    //input.value = ''
+    this.refs.txtInput.value = ''
   }
   render(){
     return(

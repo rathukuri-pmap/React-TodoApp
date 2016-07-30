@@ -3,9 +3,8 @@ import {
   DELETE_ITEM
 } from '../constants'
 
-let nextid = 0;
+let nextid = 1;
 export const addItem = (status,title) => {
-        alert('reached here');
         return {
             id: nextid++,
             type: ADD_ITEM,
