@@ -3,6 +3,9 @@ import { Row, Col } from 'react-bootstrap';
 // Layout components.
 import Main from '../../layouts/main';
 import List from './components/List';
+import {DragDropContext} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+
 
 class KanbanApp extends Component {
   constructor() {
@@ -30,5 +33,4 @@ class KanbanApp extends Component {
     )
   }
 }
-
-export default KanbanApp
+export default DragDropContext(HTML5Backend)(KanbanApp);

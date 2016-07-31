@@ -1,6 +1,7 @@
 import {
   ADD_ITEM,
-  DELETE_ITEM
+  DELETE_ITEM,
+  UPDATE_ITEM_STATUS
 } from '../constants'
 
 let nextid = 0;
@@ -17,6 +18,14 @@ export const deleteItem = (status,id) => {
         return {
             id: id,
             type: DELETE_ITEM,
+            status: status
+          }
+  }
+
+export const updateItemStatus = (id,status) => {
+        return {
+            id: id,
+            type: UPDATE_ITEM_STATUS,
             status: status
           }
   }
