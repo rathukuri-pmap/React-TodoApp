@@ -3,7 +3,7 @@ import {
   DELETE_ITEM
 } from '../constants'
 
-let nextid = 1;
+let nextid = 0;
 export const addItem = (status,title) => {
         return {
             id: nextid++,

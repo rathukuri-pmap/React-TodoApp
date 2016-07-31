@@ -5,7 +5,7 @@ import {
 
 import utils from '../../../../utils';
 
-const kanbanItem = (state = {kanbanItem:[]} , action) => {
+const kanbanItem = (state={kanbanItem:[]}, action) => {
   switch (action.type) {
     case ADD_ITEM:
       return (
@@ -17,9 +17,9 @@ const kanbanItem = (state = {kanbanItem:[]} , action) => {
       )
       break;
     case DELETE_ITEM:
-      let di = utils.findWithAttr(state.kanbanItem,'id','status',action.id,action.status);
-      let newstate = state.kanbanItem;
-      return newstate.splice(di,1);
+      return state.filter(
+        (ki) => ki.id !== action.id
+      )
     default:
     return state;
   }
