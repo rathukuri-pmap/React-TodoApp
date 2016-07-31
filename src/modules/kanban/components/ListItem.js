@@ -8,8 +8,9 @@ class ListItem extends Component {
   }
   render(){
     return(
-    <div>
-    {this.props.title} <lable onClick={() => this.props.dispatch(deleteItem(this.props.status,this.props.id))} >x</lable>
+    <div className="card">
+    {this.props.title} <lable className="delete_item"
+                              onClick={() => this.props.dispatch(deleteItem(this.props.status,this.props.id))} >Delete</lable>
     </div>
   );
   }
