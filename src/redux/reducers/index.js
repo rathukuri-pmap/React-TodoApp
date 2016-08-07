@@ -37,6 +37,10 @@ import visibilityFilter from '../../modules/todo/redux/reducers/visibilityFilter
 //kanban (kb_)
 import kanbanItem from '../../modules/kanban/redux/reducers/kanbanItem';
 
+//user
+import user from '../../modules/user/redux/reducers/user';
+import userSelected from '../../modules/user/redux/reducers/userSelected';
+
 module.exports = {
   // Global.
   globalSettings,
@@ -76,4 +80,8 @@ module.exports = {
 
   // kanban
   kanbanItem,
+
+  // user
+  user,
+  userSelected,
 };

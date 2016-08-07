@@ -1,0 +1,2 @@
+export const USER_DELETE = 'USER_DELETE';
+export const USER_CHK_SELECTED = 'USER_CHK_SELECTED';

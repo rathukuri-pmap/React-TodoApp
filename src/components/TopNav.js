@@ -48,6 +48,10 @@ class TopNav extends React.Component {
               <NavItem eventKey={5}>Kanban App</NavItem>
             </LinkContainer>
 
+            <LinkContainer to="/user">
+              <NavItem eventKey={6}>User Management</NavItem>
+            </LinkContainer>
+            
           </Nav>
 
           <Nav pullRight>
